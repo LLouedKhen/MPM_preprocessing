@@ -1,3 +1,16 @@
+%The following program trawls through raw dicoms to, first, identify MPMs,
+%and second, extract them, according to their headers into the right
+%contrats (PT, MT, T1, etc) and into the correct echoes.
+%Routinues written for C. Piguet, unige, following dicom2niftii conversion
+%problems; cannot be unique given the existence of GetImgFromMosaic in VBQ
+%toolbox.
+%If MPM sequences haven't yet been identified and placed in a separate folder, uncomment lines 40-55
+%Lines 40-55 have not been tested!!! Use with caution.
+%Use WrapperFindMPM_GetEcho.m after this, to complete dicom2nifti
+%conversion.
+%Make sure the VBQ toolbox is in the path
+%By Leyla Loued-Khenissi, 4th of July, 2019
+
 
 clear; clc;
 
